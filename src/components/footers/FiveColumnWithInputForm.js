@@ -46,109 +46,63 @@ const SocialLink = styled.a`
   }
 `;
 
+const HighlightedText = tw.span`bg-primary-500 text-gray-100 px-4 transform -skew-x-12 inline-block`;
+
 export default () => {
   return (
     <Container>
       <Content>
         <SixColumns>
           <Column>
-            <ColumnHeading>Main</ColumnHeading>
-            <LinkList>
-              <LinkListItem>
-                <Link href="#">Blog</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">FAQs</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Support</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">About Us</Link>
-              </LinkListItem>
-            </LinkList>
+            <ColumnHeading>Mapa</ColumnHeading>
+            <div>
+
+            </div>
           </Column>
           <Column>
-            <ColumnHeading>Product</ColumnHeading>
+            <ColumnHeading>Acesso Rápido</ColumnHeading>
             <LinkList>
               <LinkListItem>
-                <Link href="#">Log In</Link>
+                <Link href="#">Início</Link>
               </LinkListItem>
               <LinkListItem>
-                <Link href="#">Personal</Link>
+                <Link href="#">Sobre Nós</Link>
               </LinkListItem>
               <LinkListItem>
-                <Link href="#">Business</Link>
+                <Link href="#">Serviços</Link>
               </LinkListItem>
               <LinkListItem>
-                <Link href="#">Team</Link>
+                <Link href="#">Espaço</Link>
+              </LinkListItem>
+              <LinkListItem>
+                <Link href="#">Contato</Link>
               </LinkListItem>
             </LinkList>
           </Column>
-          <Column>
-            <ColumnHeading>Press</ColumnHeading>
-            <LinkList>
-              <LinkListItem>
-                <Link href="#">Logos</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Events</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Stories</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Office</Link>
-              </LinkListItem>
-            </LinkList>
-          </Column>
-          <Column>
-            <ColumnHeading>Legal</ColumnHeading>
-            <LinkList>
-              <LinkListItem>
-                <Link href="#">GDPR</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Privacy Policy</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Terms of Service</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Disclaimer</Link>
-              </LinkListItem>
-            </LinkList>
-          </Column>
+       
+        
           <SubscribeNewsletterColumn>
             <SubscribeNewsletterContainer>
-              <ColumnHeading>Subscribe to our Newsletter</ColumnHeading>
+              <ColumnHeading>Fale com a gente!</ColumnHeading>
               <SubscribeText>
-                We deliver high quality blog posts written by professionals weekly. And we promise no spam.
+                <HighlightedText>Telefone</HighlightedText> 93992274474
               </SubscribeText>
-              <SubscribeForm method="get" action="#">
-                <Input type="email" placeholder="Your Email Address" />
-                <SubscribeButton type="submit">Subscribe</SubscribeButton>
-              </SubscribeForm>
+              <SubscribeText>
+                <HighlightedText>Email</HighlightedText> luisgomesbcc@gmail.com
+              </SubscribeText>
+              <SubscribeText>
+                <HighlightedText>Localização</HighlightedText> Travessa sorriso de maria, 474, bairro jardim santarém
+              </SubscribeText>
+
             </SubscribeNewsletterContainer>
           </SubscribeNewsletterColumn>
         </SixColumns>
         <Divider />
         <ThreeColRow>
           <LogoContainer>
-            <LogoImg src={LogoImage} />
-            <LogoText>Treact Inc.</LogoText>
           </LogoContainer>
-          <CopywrightNotice>&copy; 2018 Treact Inc. All Rights Reserved.</CopywrightNotice>
+          <CopywrightNotice>&copy; Todos os direitos reservados.</CopywrightNotice>
           <SocialLinksContainer>
-            <SocialLink href="https://facebook.com">
-              <FacebookIcon />
-            </SocialLink>
-            <SocialLink href="https://twitter.com">
-              <TwitterIcon />
-            </SocialLink>
-            <SocialLink href="https://youtube.com">
-              <YoutubeIcon />
-            </SocialLink>
           </SocialLinksContainer>
         </ThreeColRow>
       </Content>

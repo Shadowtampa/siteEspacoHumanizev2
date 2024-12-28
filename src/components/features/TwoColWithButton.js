@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
-import TeamIllustrationSrc from "images/team-illustration-2.svg";
+import TeamIllustrationSrc from "images/kaioAlexandra.png";
 import {ReactComponent as SvgDotPattern } from "images/dot-pattern.svg"
 
 const Container = tw.div`relative`;
@@ -71,12 +71,12 @@ export default ({
         </ImageColumn>
         <TextColumn textOnLeft={textOnLeft}>
           <TextContent>
-            <Subheading>{subheading}</Subheading>
+            {/* <Subheading>{subheading}</Subheading> */}
             <Heading>{heading}</Heading>
             <Description>{description}</Description>
-            <PrimaryButton buttonRounded={buttonRounded} as="a" href={primaryButtonUrl}>
+            {/* <PrimaryButton buttonRounded={buttonRounded} as="a" href={primaryButtonUrl}>
               {primaryButtonText}
-            </PrimaryButton>
+            </PrimaryButton> */}
           </TextContent>
         </TextColumn>
       </TwoColumn>

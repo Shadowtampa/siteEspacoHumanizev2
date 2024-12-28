@@ -59,14 +59,6 @@ export default ({
       <NavLink href="/#">Pricing</NavLink>
       <NavLink href="/#">Contact Us</NavLink>
       <NavLink href="/#">Testimonials</NavLink>
-    </NavLinks>,
-    <NavLinks key={2}>
-      <NavLink href="/#" tw="lg:ml-12!">
-        Login
-      </NavLink>
-      <PrimaryLink css={buttonRoundedCss} href="/#">
-        Sign Up
-      </PrimaryLink>
     </NavLinks>
   ];
   return (

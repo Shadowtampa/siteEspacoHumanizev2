@@ -6,7 +6,9 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 
 import useAnimatedNavToggler from "../../helpers/useAnimatedNavToggler.js";
 
-import logo from "../../images/logo.svg";
+import logo from "../../images/humanizearvore.jpg";
+import logoText from "../../images/espacoHumanizeLogoTexto.png";
+
 import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg";
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
 
@@ -72,14 +74,11 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
    */
   const defaultLinks = [
     <NavLinks key={1}>
-      <NavLink href="/#">About</NavLink>
-      <NavLink href="/#">Blog</NavLink>
-      <NavLink href="/#">Pricing</NavLink>
-      <NavLink href="/#">Contact Us</NavLink>
-      <NavLink href="/#" tw="lg:ml-12!">
-        Login
-      </NavLink>
-      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`}href="/#">Sign Up</PrimaryLink>
+      <NavLink href="/#">Início</NavLink>
+      <NavLink href="/#">Sobre Nós</NavLink>
+      <NavLink href="/#">Serviços</NavLink>
+      <NavLink href="/#">Espaço</NavLink>
+      <NavLink href="/#">Contato</NavLink>
     </NavLinks>
   ];
 
@@ -88,8 +87,10 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
 
   const defaultLogoLink = (
     <LogoLink href="/">
-      <img src={logo} alt="logo" />
-      Humanize
+      <img src={logo} alt="logo" style={{ height: "60px", width: "60px" }} />
+      <img src={logoText} alt="logo" style={{ height: "60px", width: "auto" }} />
+
+
     </LogoLink>
   );
 

@@ -100,12 +100,6 @@ export default ({
                 </span>
                 <span className="title">{card.title}</span>
                 <p className="description">{card.description}</p>
-                {linkText && (
-                  <span className="link">
-                    <span>{linkText}</span>
-                    <ArrowRightIcon className="icon" />
-                  </span>
-                )}
               </Card>
             </Column>
           ))}

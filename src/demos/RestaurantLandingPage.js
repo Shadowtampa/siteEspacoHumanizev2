@@ -24,36 +24,25 @@ export default () => {
   return (
     <AnimationRevealPage>
       <Hero
-        heading={<>Olá! Seja <HighlightedText>Bem vindo</HighlightedText></>}
+        heading={<>Olá! Sejam <HighlightedText>Bem-vindos</HighlightedText></>}
         description="Profissionais preparados para melhor lhe atender!"
-        imageSrc="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80"
         imageCss={imageCss}
         imageDecoratorBlob={true}
         primaryButtonText="Entre em contato"
       />
       <MainFeature
-        subheading={<Subheading>Established Since 2014</Subheading>}
         heading={
           <>
-            We've been serving for
-            <wbr /> <HighlightedText>over 5 years.</HighlightedText>
+            Mais que uma clínica,
+            <wbr /> <HighlightedText>um lugar em que o ser humano é a prioridade</HighlightedText>
           </>
         }
         description={
           <Description>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua.
-            <br />
-            <br />
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </Description>
+            A clínica nasceu de um sonho genuíno, compartilhado por Alexandra Alves e Kaio Rocha, dois psicólogos que acreditavam profundamente em um espaço de terapia onde cada pessoa pudesse se sentir verdadeiramente acolhida. Mais do que uma clínica, eles queriam criar um lugar em que o ser humano fosse sempre a prioridade, onde ninguém se sentisse julgado, e onde cada atendimento fosse feito com ética, respeito e empatia. </Description>
         }
         buttonRounded={false}
         textOnLeft={false}
-        primaryButtonText="Latest Offers"
-        imageSrc={
-          "https://images.unsplash.com/photo-1460306855393-0410f61241c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80"
-        }
         imageCss={imageCss}
         imageDecoratorBlob={true}
         imageDecoratorBlobCss={tw`left-1/2 -translate-x-1/2 md:w-32 md:h-32 opacity-25`}
@@ -62,73 +51,51 @@ export default () => {
       <TabGrid
         heading={
           <>
-            Checkout our <HighlightedText>menu.</HighlightedText>
+            Veja nossos <HighlightedText>serviços</HighlightedText>
           </>
         }
       />
       <Features
         heading={
           <>
-            Amazing <HighlightedText>Services.</HighlightedText>
+            <HighlightedText>Salas</HighlightedText> perfeitas pra você
           </>
         }
         cards={[
           {
             imageSrc: shopIconImageSrc,
-            title: "230+ Locations",
-            description: "Lorem ipsum donor amet siti ceali placeholder text",
-            url: "https://google.com"
+            title: "Recepção",
+            description: "Recepção disponibiliza para todas as salas",
+            url: "#"
+          },
+          {
+            imageSrc: shopIconImageSrc,
+            title: "Conforto garantido",
+            description: "Salas com sofás disponíveis",
+            url: "#"
           },
           {
             imageSrc: chefIconImageSrc,
-            title: "Professional Chefs",
-            description: "Lorem ipsum donor amet siti ceali placeholder text",
-            url: "https://timerse.com"
+            title: "Acústica",
+            description: "As salas oferecem selagem acústica",
+            url: "#"
           },
           {
             imageSrc: celebrationIconImageSrc,
-            title: "Birthday Catering",
-            description: "Lorem ipsum donor amet siti ceali placeholder text",
-            url: "https://reddit.com"
+            title: "Climatização",
+            description: "Todas as salas possuem sistema de ar condicionado",
+            url: "#"
           }
         ]}
 
         imageContainerCss={tw`p-2!`}
         imageCss={tw`w-20! h-20!`}
       />
-      <MainFeature2
-        subheading={<Subheading>A Reputed Brand</Subheading>}
-        heading={<>Why <HighlightedText>Choose Us ?</HighlightedText></>}
-        statistics={[
-          {
-            key: "Orders",
-            value: "94000+",
-          },
-          {
-            key: "Customers",
-            value: "11000+"
-          },
-          {
-            key: "Chefs",
-            value: "1500+"
-          }
-        ]}
-        primaryButtonText="Order Now"
-        primaryButtonUrl="https://order.now.com"
-        imageInsideDiv={false}
-        imageSrc="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEzNzI2fQ&auto=format&fit=crop&w=768&q=80"
-        imageCss={Object.assign(tw`bg-cover`, imageCss)}
-        imageContainerCss={tw`md:w-1/2 h-auto`}
-        imageDecoratorBlob={true}
-        imageDecoratorBlobCss={tw`left-1/2 md:w-32 md:h-32 -translate-x-1/2 opacity-25`}
-        textOnLeft={true}
-      />
-      <Testimonial
-        subheading=""
-        heading={<>Customers <HighlightedText>Love Us.</HighlightedText></>}
-      />
       <DownloadApp
-        text={<>People around you are ordering delicious meals using the <HighlightedTextInverse>Treact App.</HighlightedTextInverse></>}
+
+
+        text={<>
+          Entre em contato e encontre acolhimento, empatia e respeito. Estamos aqui para entender suas necessidades e <HighlightedTextInverse>ajudar você</HighlightedTextInverse>  a trilhar caminhos alinhados aos seus objetivos. </>}
       />
       <Footer />
     </AnimationRevealPage>

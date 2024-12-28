@@ -13,7 +13,7 @@ import { ReactComponent as PlayIcon } from "feather-icons/dist/icons/play-circle
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
 import { ReactComponent as SvgDecoratorBlob1 } from "../../images/svg-decorator-blob-1.svg";
 import { ReactComponent as SvgDecoratorBlob2 } from "../../images/dot-pattern.svg";
-import DesignIllustration from "../../images/design-illustration.svg";
+import DesignIllustration from "../../images/humanizehERO.jpg";
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col lg:flex-row md:items-center max-w-screen-xl mx-auto py-20 md:py-24`;
@@ -60,7 +60,7 @@ const CloseModalButton = tw.button`absolute top-0 right-0 mt-8 mr-8 hocus:text-p
 
 export default ({
   heading = "Modern React Templates, Just For You",
- description="Our templates are easy to setup, understand and customize. Fully modular components with a variety of pages and components.",
+  description="Our templates are easy to setup, understand and customize. Fully modular components with a variety of pages and components.",
   primaryButtonText="Get Started",
   primaryButtonUrl="#",
   watchVideoButtonText="Watch Video",
