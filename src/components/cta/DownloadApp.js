@@ -9,14 +9,14 @@ import { SectionHeading, Subheading as SubheadingBase } from "components/misc/He
 import appleIconImageSrc from "images/whatsapp.svg";
 import googlePlayIconImageSrc from "images/google-play-icon.png"
 
-const Container = tw(ContainerBase)`bg-gray-900 -mx-8`
+const Container = tw(ContainerBase)`-mx-8`
 const Content = tw(ContentWithPaddingXl)``
 const Row = tw.div`px-8 flex items-center relative z-10 flex-col lg:flex-row text-center lg:text-left justify-center`;
 
 const ColumnContainer = tw.div`max-w-2xl`
 const TextContainer = tw(ColumnContainer)``;
-const Text = tw(SectionHeading)`text-gray-100 lg:text-left max-w-none text-3xl leading-snug`;
-const Subheading = tw(SubheadingBase)`text-yellow-500 mb-4 tracking-wider`
+const Text = tw(SectionHeading)`text-primary-500 lg:text-left max-w-none text-3xl leading-snug`;
+const Subheading = tw(SubheadingBase)`text-primary-700 mb-4 tracking-wider`
 
 const LinksContainer = tw.div`mt-8 lg:mt-16 flex flex-col items-center sm:block`
 const Link = styled.a`
@@ -32,29 +32,29 @@ const Link = styled.a`
 const ImageContainer = tw(ColumnContainer)`mt-16 lg:mt-0 lg:ml-16 flex justify-end`;
 
 const DecoratorBlobContainer = tw.div`absolute inset-0 overflow-hidden rounded-lg`
-const DecoratorBlob1 = tw(SvgDecoratorBlob1)`absolute bottom-0 left-0 w-80 h-80 transform -translate-x-20 translate-y-32 text-gray-800 opacity-50`
-const DecoratorBlob2 = tw(SvgDecoratorBlob1)`absolute top-0 right-0 w-80 h-80 transform  translate-x-20 -translate-y-64 text-gray-800 opacity-50`
+const DecoratorBlob1 = tw(SvgDecoratorBlob1)`absolute bottom-0 left-0 w-80 h-80 transform -translate-x-20 translate-y-32 text-gray-400 opacity-50`
 export default ({
   subheading = "Estamos aqui para ouvir você!",
   text = "Developers all over the world are happily using Treact.",
   link1Text = "Whatsapp",
-  link1Url = "http://apple.com",
+  link1Url = "https://api.whatsapp.com/send?phone=559191267386&text=Gostaria%20de%20agendar%20um%20serviço",
   link1IconSrc = appleIconImageSrc,
   link2Text = "Google Play",
   link2Url = "http://play.google.com",
   link2IconSrc = googlePlayIconImageSrc,
   pushDownFooter = false,
   imageSrc = mockupImageSrc,
+  name = "contact"
 }) => {
   return (
-    <Container css={pushDownFooter && tw`mb-20 lg:mb-24`}>
+    <Container css={pushDownFooter && tw`mb-20 lg:mb-24`} name={name}>
       <Content>
         <Row>
           <TextContainer>
             {subheading && <Subheading>{subheading}</Subheading>}
             <Text>{text}</Text>
             <LinksContainer>
-              <Link href={link1Url}>
+              <Link href={link1Url} target="_blank">
                 <img src={link1IconSrc} alt=""/>
                 <span>{link1Text}</span>
               </Link>
@@ -66,7 +66,6 @@ export default ({
         </Row>
         <DecoratorBlobContainer>
           <DecoratorBlob1/>
-          <DecoratorBlob2/>
         </DecoratorBlobContainer>
       </Content>
     </Container>

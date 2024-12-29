@@ -2,21 +2,21 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import AnimationRevealPage from "helpers/AnimationRevealPage.js"
 
-import EventLandingPage from "demos/EventLandingPage.js";
-import HotelTravelLandingPage from "demos/HotelTravelLandingPage.js";
-import AgencyLandingPage from "demos/AgencyLandingPage.js";
-import SaaSProductLandingPage from "demos/SaaSProductLandingPage.js";
+// import EventLandingPage from "demos/EventLandingPage.js";
+// import HotelTravelLandingPage from "demos/HotelTravelLandingPage.js";
+// import AgencyLandingPage from "demos/AgencyLandingPage.js";
+// import SaaSProductLandingPage from "demos/SaaSProductLandingPage.js";
 import RestaurantLandingPage from "demos/RestaurantLandingPage.js";
-import ServiceLandingPage from "demos/ServiceLandingPage.js";
-import HostingCloudLandingPage from "demos/HostingCloudLandingPage.js";
+// import ServiceLandingPage from "demos/ServiceLandingPage.js";
+// import HostingCloudLandingPage from "demos/HostingCloudLandingPage.js";
 
-import EventLandingPageImageSrc from "images/demo/EventLandingPage.jpeg";
-import HotelTravelLandingPageImageSrc from "images/demo/HotelTravelLandingPage.jpeg";
-import AgencyLandingPageImageSrc from "images/demo/AgencyLandingPage.jpeg";
-import SaaSProductLandingPageImageSrc from "images/demo/SaaSProductLandingPage.jpeg";
+// import EventLandingPageImageSrc from "images/demo/EventLandingPage.jpeg";
+// import HotelTravelLandingPageImageSrc from "images/demo/HotelTravelLandingPage.jpeg";
+// import AgencyLandingPageImageSrc from "images/demo/AgencyLandingPage.jpeg";
+// import SaaSProductLandingPageImageSrc from "images/demo/SaaSProductLandingPage.jpeg";
 import RestaurantLandingPageImageSrc from "images/demo/RestaurantLandingPage.jpeg";
-import ServiceLandingPageImageSrc from "images/demo/ServiceLandingPage.jpeg";
-import HostingCloudLandingPageImageSrc from "images/demo/HostingCloudLandingPage.jpeg";
+// import ServiceLandingPageImageSrc from "images/demo/ServiceLandingPage.jpeg";
+// import HostingCloudLandingPageImageSrc from "images/demo/HostingCloudLandingPage.jpeg";
 
 
 import LoginPage from "pages/Login.js";
@@ -72,7 +72,7 @@ import ThreeColContactDetailsCards from "components/cards/ThreeColContactDetails
 import ThreeColSimpleWithImageBlog from "components/blogs/ThreeColSimpleWithImage.js";
 import ThreeColSimpleWithImageAndDashedBorderBlog from "components/blogs/ThreeColSimpleWithImageAndDashedBorder.js";
 import PopularAndRecentPostsBlog from "components/blogs/PopularAndRecentBlogPosts.js";
-import GridWithFeaturedPostBlog from "components/blogs/GridWithFeaturedPost.js";
+// import GridWithFeaturedPostBlog from "components/blogs/GridWithFeaturedPost.js";
 
 import TwoColumnWithImageTestimonial from "components/testimonials/TwoColumnWithImage.js";
 import TwoColumnWithImageAndProfilePictureReviewTestimonial from "components/testimonials/TwoColumnWithImageAndProfilePictureReview.js";
@@ -106,37 +106,7 @@ export const components = {
       component: RestaurantLandingPage,
       imageSrc: RestaurantLandingPageImageSrc,
       url: "/components/landingPages/RestaurantLandingPage",
-    },
-    HotelTravelLandingPage: {
-      component: HotelTravelLandingPage,
-      imageSrc: HotelTravelLandingPageImageSrc,
-      url: "/components/landingPages/HotelTravelLandingPage",
-    },
-    SaaSProductLandingPage: {
-      component: SaaSProductLandingPage,
-      imageSrc: SaaSProductLandingPageImageSrc,
-      url: "/components/landingPages/SaaSProductLandingPage",
-    },
-    ServiceLandingPage: {
-      component: ServiceLandingPage,
-      imageSrc: ServiceLandingPageImageSrc,
-      url: "/components/landingPages/ServiceLandingPage",
-    },
-    EventLandingPage: {
-      component: EventLandingPage,
-      imageSrc: EventLandingPageImageSrc,
-      url: "/components/landingPages/EventLandingPage",
-    },
-    AgencyLandingPage: {
-      component: AgencyLandingPage,
-      imageSrc: AgencyLandingPageImageSrc,
-      url: "/components/landingPages/AgencyLandingPage",
-    },
-    HostingCloudLandingPage: {
-      component: HostingCloudLandingPage,
-      imageSrc: HostingCloudLandingPageImageSrc,
-      url: "/components/landingPages/HostingCloudLandingPage",
-    },
+    }
   },
 
   innerPages: {
@@ -350,26 +320,26 @@ export const components = {
     Blog: {
       type: "Blog Section",
       elements: {
-        GridWithFeaturedPost: {
-          name: "Grid With Featured Post",
-          component: GridWithFeaturedPostBlog,
-          url: "/components/blocks/Blog/GridWithFeaturedPost",
-        },
-        PopularAndRecentPosts: {
-          name: "Popular And Recent Posts",
-          component: PopularAndRecentPostsBlog,
-          url: "/components/blocks/Blog/PopularAndRecentPosts",
-        },
-        ThreeColSimpleWithImage: {
-          name: "Simple Three Column With Image",
-          component: ThreeColSimpleWithImageBlog,
-          url: "/components/blocks/Blog/ThreeColSimpleWithImage",
-        },
-        ThreeColSimpleWithImageAndDashedBorder: {
-          name: "Simple Three Column With Image and Dashed Border",
-          component: ThreeColSimpleWithImageAndDashedBorderBlog,
-          url: "/components/blocks/Blog/ThreeColSimpleWithImageAndDashedBorder",
-        },
+        // GridWithFeaturedPost: {
+        //   name: "Grid With Featured Post",
+        //   component: GridWithFeaturedPostBlog,
+        //   url: "/components/blocks/Blog/GridWithFeaturedPost",
+        // },
+        // PopularAndRecentPosts: {
+        //   name: "Popular And Recent Posts",
+        //   component: PopularAndRecentPostsBlog,
+        //   url: "/components/blocks/Blog/PopularAndRecentPosts",
+        // },
+        // ThreeColSimpleWithImage: {
+        //   name: "Simple Three Column With Image",
+        //   component: ThreeColSimpleWithImageBlog,
+        //   url: "/components/blocks/Blog/ThreeColSimpleWithImage",
+        // },
+        // ThreeColSimpleWithImageAndDashedBorder: {
+        //   name: "Simple Three Column With Image and Dashed Border",
+        //   component: ThreeColSimpleWithImageAndDashedBorderBlog,
+        //   url: "/components/blocks/Blog/ThreeColSimpleWithImageAndDashedBorder",
+        // },
       } 
     },
 

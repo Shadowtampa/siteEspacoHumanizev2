@@ -12,6 +12,8 @@ import logoText from "../../images/espacoHumanizeLogoTexto.png";
 import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg";
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
 
+import { Link} from "react-scroll";
+
 const Header = tw.header`
   flex justify-between items-center
   max-w-screen-xl mx-auto
@@ -58,7 +60,16 @@ export const DesktopNavLinks = tw.nav`
   hidden lg:flex flex-1 justify-between items-center
 `;
 
+const StyledLink = tw(Link)`
+  text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
+  font-semibold tracking-wide transition duration-300
+  pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500
+`;
+
 export default ({ roundedHeaderButton = false, logoLink, links, className, collapseBreakpointClass = "lg" }) => {
+  const { showNavLinks, animation, toggleNavbar } = useAnimatedNavToggler();
+
+
   /*
    * This header component accepts an optionals "links" prop that specifies the links to render in the navbar.
    * This links props should be an array of "NavLinks" components which is exported from this file.
@@ -74,15 +85,67 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
    */
   const defaultLinks = [
     <NavLinks key={1}>
-      <NavLink href="/#">Início</NavLink>
-      <NavLink href="/#">Sobre Nós</NavLink>
-      <NavLink href="/#">Serviços</NavLink>
-      <NavLink href="/#">Espaço</NavLink>
-      <NavLink href="/#">Contato</NavLink>
+      <StyledLink
+        activeClass="active"
+        to="landing"
+        spy={true}
+        smooth={true}
+        offset={50}
+        duration={500}
+        href="/#"
+
+        onClick={toggleNavbar}
+      >
+        Início
+      </StyledLink>
+      <StyledLink href="/#"
+        activeClass="active"
+        to="about"
+        spy={true}
+        smooth={true}
+        offset={50}
+        duration={500}
+        onClick={toggleNavbar}
+      >
+        Sobre Nós
+      </StyledLink>
+      <StyledLink href="/#"
+        activeClass="active"
+        to="services"
+        spy={true}
+        smooth={true}
+        offset={50}
+        duration={500}
+
+        onClick={toggleNavbar}
+      >
+        Serviços
+      </StyledLink>
+      <StyledLink href="/#"
+        activeClass="active"
+        to="rooms"
+        spy={true}
+        smooth={true}
+        offset={50}
+        duration={500}
+        onClick={toggleNavbar}
+      >
+        Espaço
+      </StyledLink>
+      <StyledLink href="/#"
+        activeClass="active"
+        to="contact"
+        spy={true}
+        smooth={true}
+        offset={50}
+        duration={500}
+        onClick={toggleNavbar}
+      >
+        Contato
+      </StyledLink>
     </NavLinks>
   ];
 
-  const { showNavLinks, animation, toggleNavbar } = useAnimatedNavToggler();
   const collapseBreakpointCss = collapseBreakPointCssMap[collapseBreakpointClass];
 
   const defaultLogoLink = (
@@ -109,7 +172,7 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
         <MobileNavLinks initial={{ x: "150%", display: "none" }} animate={animation} css={collapseBreakpointCss.mobileNavLinks}>
           {links}
         </MobileNavLinks>
-        <NavToggle onClick={toggleNavbar} className={showNavLinks ? "open" : "closed"}>
+        <NavToggle id="NavToggle" onClick={toggleNavbar} className={showNavLinks ? "open" : "closed"}>
           {showNavLinks ? <CloseIcon tw="w-6 h-6" /> : <MenuIcon tw="w-6 h-6" />}
         </NavToggle>
       </MobileNavLinksContainer>

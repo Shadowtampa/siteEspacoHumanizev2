@@ -5,31 +5,44 @@ import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import Hero from "components/hero/TwoColumnWithVideo.js";
 import Features from "components/features/ThreeColSimple.js";
 import MainFeature from "components/features/TwoColWithButton.js";
-import MainFeature2 from "components/features/TwoColSingleFeatureWithStats2.js";
+// import MainFeature2 from "components/features/TwoColSingleFeatureWithStats2.js";
 import TabGrid from "components/cards/TabCardGrid.js";
-import Testimonial from "components/testimonials/ThreeColumnWithProfileImage.js";
+// import Testimonial from "components/testimonials/ThreeColumnWithProfileImage.js";
 import DownloadApp from "components/cta/DownloadApp.js";
 import Footer from "components/footers/FiveColumnWithInputForm.js";
 
-import chefIconImageSrc from "images/chef-icon.svg";
-import celebrationIconImageSrc from "images/celebration-icon.svg";
-import shopIconImageSrc from "images/shop-icon.svg";
+import AcousticImageSrc from "images/acoustic.svg";
+import AirConImageSrc from "images/airCon.svg";
+import frontDeskImageSrc from "images/front-desk.png";
+import couchImageSrc from "images/sofa.png";
+
+import Header from "../components/headers/light.js";
+
+const HighlightedText = tw.span`bg-primary-500 text-gray-100 px-4 transform -skew-x-12 inline-block`;
+const Description = tw.span`inline-block mt-8`;
 
 export default () => {
-  const Subheading = tw.span`tracking-wider text-sm font-medium`;
-  const HighlightedText = tw.span`bg-primary-500 text-gray-100 px-4 transform -skew-x-12 inline-block`;
-  const HighlightedTextInverse = tw.span`bg-gray-100 text-primary-500 px-4 transform -skew-x-12 inline-block`;
-  const Description = tw.span`inline-block mt-8`;
+  // const Subheading = tw.span`tracking-wider text-sm font-medium`;
+
   const imageCss = tw`rounded-4xl`;
+
+
   return (
     <AnimationRevealPage>
+
+      <Header />
+
+
       <Hero
         heading={<>Olá! Sejam <HighlightedText>Bem-vindos</HighlightedText></>}
         description="Profissionais preparados para melhor lhe atender!"
         imageCss={imageCss}
         imageDecoratorBlob={true}
         primaryButtonText="Entre em contato"
+        primaryButtonUrl="https://api.whatsapp.com/send?phone=559191267386&text=Gostaria%20de%20agendar%20uma%20consulta!"
+        name="landing"
       />
+
       <MainFeature
         heading={
           <>
@@ -46,6 +59,7 @@ export default () => {
         imageCss={imageCss}
         imageDecoratorBlob={true}
         imageDecoratorBlobCss={tw`left-1/2 -translate-x-1/2 md:w-32 md:h-32 opacity-25`}
+        name="about"
       />
       {/* TabGrid Component also accepts a tabs prop to customize the tabs and its content directly. Please open the TabGrid component file to see the structure of the tabs props.*/}
       <TabGrid
@@ -54,6 +68,7 @@ export default () => {
             Veja nossos <HighlightedText>serviços</HighlightedText>
           </>
         }
+        name="services"
       />
       <Features
         heading={
@@ -63,40 +78,42 @@ export default () => {
         }
         cards={[
           {
-            imageSrc: shopIconImageSrc,
+            imageSrc: frontDeskImageSrc,
             title: "Recepção",
-            description: "Recepção disponibiliza para todas as salas",
-            url: "#"
+            description: "Recepção disponibiliza para todas as salas"
           },
           {
-            imageSrc: shopIconImageSrc,
+            imageSrc: couchImageSrc,
             title: "Conforto garantido",
-            description: "Salas com sofás disponíveis",
-            url: "#"
+            description: "Salas com sofás disponíveis"
           },
           {
-            imageSrc: chefIconImageSrc,
+            imageSrc: AcousticImageSrc,
             title: "Acústica",
-            description: "As salas oferecem selagem acústica",
-            url: "#"
+            description: "As salas oferecem selagem acústica"
           },
           {
-            imageSrc: celebrationIconImageSrc,
+            imageSrc: AirConImageSrc,
             title: "Climatização",
-            description: "Todas as salas possuem sistema de ar condicionado",
-            url: "#"
+            description: "Todas as salas possuem sistema de ar condicionado"
           }
         ]}
 
         imageContainerCss={tw`p-2!`}
         imageCss={tw`w-20! h-20!`}
+        name="rooms"
       />
       <DownloadApp
-
-
         text={<>
-          Entre em contato e encontre acolhimento, empatia e respeito. Estamos aqui para entender suas necessidades e <HighlightedTextInverse>ajudar você</HighlightedTextInverse>  a trilhar caminhos alinhados aos seus objetivos. </>}
+          Entre em contato e encontre acolhimento, empatia e respeito. Estamos aqui para entender suas necessidades e <HighlightedText>ajudar você</HighlightedText>  a trilhar caminhos alinhados aos seus objetivos. </>}
+        name="contact"
       />
+
+
+      <span>
+        Imagens retiradas de
+        <HighlightedText><a href="https://www.freepik.com" target="_blank" rel="noreferrer">Freepik</a></HighlightedText>
+      </span>
       <Footer />
     </AnimationRevealPage>
   );

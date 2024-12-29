@@ -1,77 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" href="%PUBLIC_URL%/humanizearvore.jpg" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45799926-9"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
+      gtag("js", new Date());
+      gtag("config", "UA-45799926-9");
     </script>
-    <title>Espaço Humanize</title>
+
+    <!-- SEO Meta Tags -->
+    <title>Espaço Humanize - Terapia e Bem-Estar</title>
     <meta
       name="description"
-      content="Easily customizable modern React UI Templates and Components built using TailwindCSS which are also lightweight and simple to setup. All components are modular and fully responsive for great mobile experience as well as big desktop screens.  Brand Colors are also fully customizable. "
+      content="No Espaço Humanize, oferecemos acolhimento, empatia e respeito através de serviços de psicoterapia, avaliação psicológica e grupos terapêuticos. Seu bem-estar é nossa prioridade."
     />
-    <meta property="og:site_name" content="Treact" />
-    <meta property="og:title" content="Free Modern React Templates and Components for Building Landing Pages" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:site_name" content="Espaço Humanize" />
+    <meta property="og:title" content="Espaço Humanize - Terapia e Bem-Estar" />
     <meta
       property="og:description"
-      content="Easily customizable modern React UI Templates and Components built using TailwindCSS which are also lightweight and simple to setup. All components are modular and fully responsive for great mobile experience as well as big desktop screens.  Brand Colors are also fully customizable. "
+      content="Descubra acolhimento, empatia e respeito no Espaço Humanize. Psicoterapia individual, de casal e grupos terapêuticos para seu bem-estar emocional."
     />
     <meta
       property="og:image"
-      content="https://treact.owaiskhan.me/react-landing-pages-and-components-free-tailwindcss.png"
+      content="%PUBLIC_URL%/og-image.png"
     />
+    <meta property="og:url" content="https://www.espacohumanize.com.br" />
     <meta property="og:type" content="website" />
+
+    <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@owaiswiz" />
-    <meta name="twitter:creator" content="@owaiswiz" />
-    <meta name="twitter:title" content="Free Modern React Templates and Components for Building Landing Pages" />
+    <meta name="twitter:title" content="Espaço Humanize - Terapia e Bem-Estar" />
     <meta
       name="twitter:description"
-      content="Easily customizable modern React UI Templates and Components built using TailwindCSS which are also lightweight and simple to setup. All components are modular and fully responsive for great mobile experience as well as big desktop screens.  Brand Colors are also fully customizable. "
+      content="Acolhimento, empatia e respeito no Espaço Humanize. Psicoterapia e grupos terapêuticos."
     />
-    <meta name="twitter:image"
-    content="https://treact.owaiskhan.me/react-landing-pages-and-components-free-tailwindcss-twitter.png" />
+    <meta name="twitter:image" content="%PUBLIC_URL%/twitter-image.png" />
+    <meta name="twitter:site" content="@espacohumanize" />
+    <meta name="twitter:creator" content="@espacohumanize" />
+
+    <!-- Adicional -->
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>Ative o JavaScript para visualizar este site.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </body>
 </html>
