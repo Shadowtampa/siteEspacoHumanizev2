@@ -239,10 +239,9 @@ export default ({
         closeTimeoutMS={300}
         className="mainHeroModal"
         isOpen={modalIsOpen}
-        onRequestClose={toggleModal}
         shouldCloseOnOverlayClick={true}
       >
-        <CloseModalButton onClick={toggleModal}>
+        <CloseModalButton onClick={toggleModal} tw="z-[9999]">
           <CloseIcon tw="w-6 h-6" />
         </CloseModalButton>
 
