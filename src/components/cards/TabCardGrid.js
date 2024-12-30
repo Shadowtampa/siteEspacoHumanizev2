@@ -192,18 +192,27 @@ export default ({
             {tabs[tabKey].map((card, index) =>
             (
               <CardContainer key={index}>
-                <Card className="group" initial="rest" whileHover="hover" animate="rest">
+                <Card
+                  className="group"
+                  initial="rest"
+                  whileHover="hover"
+                  animate="rest"
+                  onTouchStart={(e) => {
+                    e.preventDefault(); // Previne comportamentos indesejados
+                    alert("MIM TOCO");
+                  }}
+                >
                   <CardImageContainer imageSrc={card.imageSrc}>
                     <CardHoverOverlay
                       variants={{
                         hover: {
                           opacity: 1,
-                          height: "auto"
+                          height: "auto",
                         },
                         rest: {
                           opacity: 0,
-                          height: 0
-                        }
+                          height: 0,
+                        },
                       }}
                       transition={{ duration: 0.3 }}
                     >
@@ -215,6 +224,7 @@ export default ({
                   </CardText>
                 </Card>
               </CardContainer>
+
             ))
 
             }
