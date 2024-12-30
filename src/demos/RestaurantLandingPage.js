@@ -74,7 +74,7 @@ export default () => {
       <Features
         heading={
           <>
-            <HighlightedText>Salas</HighlightedText> perfeitas pra você
+            Espaço <HighlightedText>perfeito</HighlightedText>  pra você
           </>
         }
         cards={[

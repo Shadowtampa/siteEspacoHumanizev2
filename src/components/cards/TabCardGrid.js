@@ -17,7 +17,7 @@ import PsicoterapiDomicilar from "images/Psicoterapia Domiciliar.png"
 import AvaliacaoPsicologicaHumanizada from "images/Avaliação Psicológica Humanizada.png"
 import OrientacaoVocacional from "images/Orientação Vocacional.png"
 import TreinamentosPalestras from "images/Treinamentos e Palestras.jpg"
-import PlantaoPsicologico from "images/Psicoterapia em Grupo.png"
+import PlantaoPsicologico from "images/PlantaoPiscologico.png"
 import SupervisaoClinica from "images/Supervisão Clínica.png"
 import AlugueSalas from "images/AlugueSalas.png"
 
