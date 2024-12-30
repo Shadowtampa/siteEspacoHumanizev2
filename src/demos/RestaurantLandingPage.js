@@ -19,6 +19,7 @@ import couchImageSrc from "images/sofa.png";
 import Header from "../components/headers/light.js";
 
 const HighlightedText = tw.span`bg-primary-500 text-gray-100 px-4 transform -skew-x-12 inline-block`;
+const UnderlinedText = tw.span` text-blue-500 font-bold`;
 const Description = tw.span`inline-block mt-8`;
 
 export default () => {
@@ -35,13 +36,13 @@ export default () => {
 
       <Hero
         heading={<>Olá! Sejam <HighlightedText>Bem-vindos</HighlightedText></>}
-        description="Profissionais preparados para melhor lhe atender!"
+        description="Contamos com profissionais qualificados para oferecer o melhor atendimento a você!"
         imageCss={imageCss}
         imageDecoratorBlob={true}
-        primaryButtonText="Entre em contato"
-        primaryButtonUrl="https://api.whatsapp.com/send?phone=559191267386&text=Gostaria%20de%20agendar%20uma%20consulta!"
         name="landing"
+        primaryButtonText=""
       />
+
 
       <MainFeature
         heading={
@@ -80,34 +81,47 @@ export default () => {
           {
             imageSrc: frontDeskImageSrc,
             title: "Recepção",
-            description: "Recepção disponibiliza para todas as salas"
+            description: "Recepção disponível para todas as salas."
           },
           {
             imageSrc: couchImageSrc,
             title: "Conforto garantido",
-            description: "Salas com sofás disponíveis"
+            description: "Salas equipadas com sofás aconchegantes."
           },
           {
             imageSrc: AcousticImageSrc,
             title: "Acústica",
-            description: "As salas oferecem selagem acústica"
+            description: "Salas com isolamento acústico eficiente."
           },
           {
             imageSrc: AirConImageSrc,
             title: "Climatização",
-            description: "Todas as salas possuem sistema de ar condicionado"
+            description: "Todas as salas com ar-condicionado."
           }
+
         ]}
 
         imageContainerCss={tw`p-2!`}
         imageCss={tw`w-20! h-20!`}
         name="rooms"
       />
-      <DownloadApp
+
+      <Hero
+        heading="Estamos aqui para ouvir você!"
+        description={<>
+          Entre em contato e encontre <UnderlinedText>acolhimento</UnderlinedText>, <UnderlinedText>empatia</UnderlinedText> e <UnderlinedText>respeito</UnderlinedText>. Estamos aqui para entender suas necessidades e <HighlightedText>ajudar você</HighlightedText>  a trilhar caminhos alinhados aos seus objetivos. </>}
+        imageCss={imageCss}
+        imageDecoratorBlob={true}
+        name="contact"
+        primaryButtonText="Whatsapp"
+        primaryButtonUrl="https://api.whatsapp.com/send?phone=559191267386&text=Gostaria%20de%20agendar%20um%20serviço"
+      />
+
+      {/* <DownloadApp
         text={<>
           Entre em contato e encontre acolhimento, empatia e respeito. Estamos aqui para entender suas necessidades e <HighlightedText>ajudar você</HighlightedText>  a trilhar caminhos alinhados aos seus objetivos. </>}
         name="contact"
-      />
+      /> */}
 
 
       <span>

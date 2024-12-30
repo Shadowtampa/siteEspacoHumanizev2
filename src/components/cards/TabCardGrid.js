@@ -19,6 +19,7 @@ import OrientacaoVocacional from "images/Orientação Vocacional.png"
 import TreinamentosPalestras from "images/Treinamentos e Palestras.jpg"
 import PlantaoPsicologico from "images/Psicoterapia em Grupo.png"
 import SupervisaoClinica from "images/Supervisão Clínica.png"
+import AlugueSalas from "images/AlugueSalas.png"
 
 import ReactModalAdapter from "../../helpers/ReactModalAdapter.js";
 
@@ -100,21 +101,21 @@ export default ({
         title: "Psicoterapia Domiciliar",
         description: "Atendimento psicoterápico no conforto da residência do cliente, garantindo continuidade no cuidado e suporte emocional necessário para quem não pode se deslocar até o consultório."
       },
-      {
-        imageSrc: PsicoterapiaInfantil,
-        title: "Psicoterapia Infantil",
-        description: "Atendimento especializado para crianças, em um ambiente lúdico, que trabalha questões emocionais e comportamentais de forma sensível e adequada ao universo infantil."
-      },
+      // {
+      //   imageSrc: PsicoterapiaInfantil,
+      //   title: "Psicoterapia Infantil",
+      //   description: "Atendimento especializado para crianças, em um ambiente lúdico, que trabalha questões emocionais e comportamentais de forma sensível e adequada ao universo infantil."
+      // },
       {
         imageSrc: AvaliacaoPsicologicaHumanizada,
         title: "Avaliação Psicológica Humanizada",
         description: "Avaliação psicológica humanizada para diversos casos, incluindo TEA, TDAH, burnout, depressão e ansiedade, com foco no bem-estar emocional e psicológico do paciente."
       },
-      {
-        imageSrc: OrientacaoVocacional,
-        title: "Orientação Vocacional",
-        description: "Ajuda jovens e adultos a explorarem habilidades, interesses e valores, auxiliando na escolha de uma profissão que esteja alinhada com suas aspirações e potencialidades."
-      },
+      // {
+      //   imageSrc: OrientacaoVocacional,
+      //   title: "Orientação Vocacional",
+      //   description: "Ajuda jovens e adultos a explorarem habilidades, interesses e valores, auxiliando na escolha de uma profissão que esteja alinhada com suas aspirações e potencialidades."
+      // },
       {
         imageSrc: TreinamentosPalestras,
         title: "Treinamentos e Palestras",
@@ -129,6 +130,11 @@ export default ({
         imageSrc: SupervisaoClinica,
         title: "Supervisão Clínica",
         description: "Serviço de orientação para profissionais e estagiários da psicologia, focando no desenvolvimento de competências clínicas e apoio técnico em casos práticos."
+      },
+      {
+        imageSrc: AlugueSalas,
+        title: "Aluguel de salas",
+        description: "Disponibilizamos salas confortáveis e equipadas para aluguel, ideais para profissionais e estagiários da psicologia. Um ambiente perfeito para atendimentos, reuniões ou práticas supervisionadas, com infraestrutura que atende às suas necessidades."
       }
     ].map(item => ({
       ...item,
@@ -163,8 +169,6 @@ export default ({
     setCardWhatsappMessageAPI(card.whatsappAPICall)
     setModalIsOpen(!modalIsOpen);
   }
-
-
   return (
     <Container name={name}>
       <ContentWithPaddingXl>

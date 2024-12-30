@@ -3,7 +3,7 @@ import tw from "twin.macro";
 // import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 
-import { Link} from "react-scroll";
+import { Link } from "react-scroll";
 
 // import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 
@@ -59,8 +59,17 @@ export default () => {
         <SixColumns>
           <Column>
             <ColumnHeading>Mapa</ColumnHeading>
-            <div>
-
+            <div style={{ width: '100%' }}>
+              <iframe
+                width="600"
+                height="450"
+                loading="lazy"
+                allowFullScreen
+                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Av.%20Mal.%20Hermes,%20S/N%20-%20Campina,%20Bel%C3%A9m%20-%20PA,%2066010-020+(Espa%C3%A7o%20Humanize)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                title="Espaço Humanize - Localização"
+              >
+                <a href="https://www.gps.ie/">gps tracker sport</a>
+              </iframe>
             </div>
           </Column>
           <Column>
@@ -129,22 +138,24 @@ export default () => {
             </LinkList>
           </Column>
 
+          <Column>
+            <SubscribeNewsletterColumn>
+              <SubscribeNewsletterContainer>
+                <ColumnHeading>Fale com a gente!</ColumnHeading>
+                <SubscribeText>
+                  <HighlightedText>Telefone</HighlightedText> Número de telefone
+                </SubscribeText>
+                <SubscribeText>
+                  <HighlightedText>Email</HighlightedText> Endereço de email
+                </SubscribeText>
+                <SubscribeText>
+                  <HighlightedText>Localização</HighlightedText> Rua númeor e bairro
+                </SubscribeText>
 
-          <SubscribeNewsletterColumn>
-            <SubscribeNewsletterContainer>
-              <ColumnHeading>Fale com a gente!</ColumnHeading>
-              <SubscribeText>
-                <HighlightedText>Telefone</HighlightedText> Número de telefone
-              </SubscribeText>
-              <SubscribeText>
-                <HighlightedText>Email</HighlightedText> Endereço de email
-              </SubscribeText>
-              <SubscribeText>
-                <HighlightedText>Localização</HighlightedText> Rua númeor e bairro
-              </SubscribeText>
+              </SubscribeNewsletterContainer>
+            </SubscribeNewsletterColumn></Column>
 
-            </SubscribeNewsletterContainer>
-          </SubscribeNewsletterColumn>
+
         </SixColumns>
         <Divider />
         <ThreeColRow>

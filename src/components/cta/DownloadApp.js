@@ -15,8 +15,8 @@ const Row = tw.div`px-8 flex items-center relative z-10 flex-col lg:flex-row tex
 
 const ColumnContainer = tw.div`max-w-2xl`
 const TextContainer = tw(ColumnContainer)``;
-const Text = tw(SectionHeading)`text-primary-500 lg:text-left max-w-none text-3xl leading-snug`;
-const Subheading = tw(SubheadingBase)`text-primary-700 mb-4 tracking-wider`
+const Text = tw(SectionHeading)`text-primary-500 lg:text-left lg:text-3xl sm:text-sm max-w-none  leading-snug`;
+const Subheading = tw(SubheadingBase)`text-primary-700 mb-4 tracking-wider lg:text-sm sm:text-3xl`
 
 const LinksContainer = tw.div`mt-8 lg:mt-16 flex flex-col items-center sm:block`
 const Link = styled.a`
