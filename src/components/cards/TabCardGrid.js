@@ -199,7 +199,7 @@ export default ({
                   animate="rest"
                   onTouchStart={(e) => {
                     e.preventDefault(); // Previne comportamentos indesejados
-                    alert("MIM TOCO");
+                    toggleModal(card);
                   }}
                 >
                   <CardImageContainer imageSrc={card.imageSrc}>
