@@ -74,7 +74,7 @@ const CloseModalButton = tw.button`absolute top-0 right-0 mt-8 mr-8 hocus:text-p
 
 const HighlightedText = tw.span`bg-primary-500 text-gray-100 px-4 transform -skew-x-12 inline-block`;
 
-const baseWhatsAppURL = "https://api.whatsapp.com/send?phone=559191267386&text=Gostaria%20de%20agendar%20o%20serviço%20de%20";
+const baseWhatsAppURL = `https://api.whatsapp.com/send?phone=55${process.env.REACT_APP_NUMERO_TELEFONE}&text=Gostaria%20de%20agendar%20o%20serviço%20de%20`;
 
 
 export default ({

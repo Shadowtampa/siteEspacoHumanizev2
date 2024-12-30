@@ -37,7 +37,7 @@ export default ({
   subheading = "Estamos aqui para ouvir você!",
   text = "Developers all over the world are happily using Treact.",
   link1Text = "Whatsapp",
-  link1Url = "https://api.whatsapp.com/send?phone=559191267386&text=Gostaria%20de%20agendar%20um%20serviço",
+  link1Url = `https://api.whatsapp.com/send?phone=55${process.env.REACT_APP_NUMERO_TELEFONE}&text=Gostaria%20de%20agendar%20um%20serviço`,
   link1IconSrc = appleIconImageSrc,
   link2Text = "Google Play",
   link2Url = "http://play.google.com",
