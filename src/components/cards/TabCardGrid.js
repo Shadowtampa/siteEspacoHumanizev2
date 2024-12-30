@@ -10,12 +10,12 @@ import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-5
 import { ReactComponent as SvgDecoratorBlob2 } from "images/svg-decorator-blob-7.svg";
 
 import PsicoterapiaIndividual from "images/PsicoterapiaIndividual.png"
-import PsicoterapiaInfantil from "images/Psicoterapia Infantil.png"
+// import PsicoterapiaInfantil from "images/Psicoterapia Infantil.png"
 import PsicoterapiaCasal from "images/Psicoterapia de Casal.png"
 import PsicoterapiaGrupo from "images/Psicoterapia em Grupo.png"
 import PsicoterapiDomicilar from "images/Psicoterapia Domiciliar.png"
 import AvaliacaoPsicologicaHumanizada from "images/Avaliação Psicológica Humanizada.png"
-import OrientacaoVocacional from "images/Orientação Vocacional.png"
+// import OrientacaoVocacional from "images/Orientação Vocacional.png"
 import TreinamentosPalestras from "images/Treinamentos e Palestras.jpg"
 import PlantaoPsicologico from "images/PlantaoPiscologico.png"
 import SupervisaoClinica from "images/Supervisão Clínica.png"
