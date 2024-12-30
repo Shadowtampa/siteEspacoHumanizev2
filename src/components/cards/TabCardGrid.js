@@ -153,6 +153,9 @@ export default ({
   const [cardWhatsappMessageAPI, setCardWhatsappMessageAPI] = useState("");
   const [cardImageSrc, setCardImageSrc] = useState(null);
 
+  const [activeCard, setActiveCard] = useState(null);
+
+
   const toggleModal = (card) => {
     setCardTitle(card.title)
     setCardDescription(card.description)
@@ -196,11 +199,8 @@ export default ({
                   className="group"
                   initial="rest"
                   whileHover="hover"
-                  animate="rest"
-                  onTouchStart={(e) => {
-                    e.preventDefault(); // Previne comportamentos indesejados
-                    toggleModal(card);
-                  }}
+                  animate={activeCard === index ? "hover" : "rest"}
+                  onTouchStart={() => setActiveCard(index)} // Mostra o overlay
                 >
                   <CardImageContainer imageSrc={card.imageSrc}>
                     <CardHoverOverlay
@@ -224,6 +224,7 @@ export default ({
                   </CardText>
                 </Card>
               </CardContainer>
+
 
             ))
 
