@@ -84,7 +84,7 @@ export default () => {
 
       <FotosSalas
         title={<>
-          Espaço <HighlightedText>perfeito</HighlightedText>  pra você
+          Espaço <HighlightedText>perfeito</HighlightedText>  para você
         </>}
         testimonials={
           [
