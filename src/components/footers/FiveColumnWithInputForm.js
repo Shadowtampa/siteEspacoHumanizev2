@@ -53,6 +53,17 @@ const SocialLinksContainer = tw.div`mt-8 md:mt-0 flex`;
 const HighlightedText = tw.span`bg-primary-500 text-gray-100 px-4 transform -skew-x-12 inline-block`;
 
 export default () => {
+
+  function formatPhoneNumber(phoneNumber) {
+    if (!phoneNumber || phoneNumber.length !== 11) return phoneNumber; // Retorna o valor original se o tamanho não for válido
+    const countryCode = "+55";
+    const ddd = phoneNumber.slice(0, 2);
+    const firstPart = phoneNumber.slice(2, 7);
+    const secondPart = phoneNumber.slice(7);
+    return `${countryCode} ${ddd} ${firstPart}-${secondPart}`;
+  }
+
+
   return (
     <Container>
       <Content>
@@ -143,7 +154,7 @@ export default () => {
               <SubscribeNewsletterContainer>
                 <ColumnHeading>Fale com a gente!</ColumnHeading>
                 <SubscribeText>
-                  <HighlightedText>Telefone</HighlightedText> {process.env.REACT_APP_NUMERO_TELEFONE}
+                  <HighlightedText>Telefone</HighlightedText> {formatPhoneNumber(process.env.REACT_APP_NUMERO_TELEFONE)}
                 </SubscribeText>
                 <SubscribeText>
                   <HighlightedText>Email</HighlightedText> humanize.eu@gmail.com

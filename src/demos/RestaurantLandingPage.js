@@ -118,7 +118,7 @@ export default () => {
         imageDecoratorBlob={true}
         name="contact"
         primaryButtonText="Whatsapp"
-        primaryButtonUrl={`https://api.whatsapp.com/send?phone=5591${process.env.REACT_APP_NUMERO_TELEFONE}&text=Gostaria%20de%20agendar%20um%20serviço`}
+        primaryButtonUrl={`https://api.whatsapp.com/send?phone=55${process.env.REACT_APP_NUMERO_TELEFONE}&text=Gostaria%20de%20agendar%20um%20serviço`}
       />
 
       {/* <DownloadApp
