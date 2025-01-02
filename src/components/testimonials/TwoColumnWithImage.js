@@ -13,6 +13,13 @@ import { ReactComponent as SvgDecoratorBlob2 } from "../../images/svg-decorator-
 
 import "slick-carousel/slick/slick.css";
 
+import Features from "components/features/ThreeColSimple.js";
+
+import AcousticImageSrc from "images/acoustic.svg";
+import AirConImageSrc from "images/airCon.svg";
+import frontDeskImageSrc from "images/front-desk.png";
+import couchImageSrc from "images/sofa.png";
+
 const Container = tw.div`relative`;
 const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
 const HeadingInfoContainer = tw.div`flex flex-col items-center`;
@@ -24,9 +31,10 @@ const Testimonial = tw.div`flex! flex-col items-center md:items-stretch md:flex-
 const ImageContainer = styled.div`
   ${tw`md:mx-3 lg:mx-6 w-2/3 md:w-4/12 rounded flex items-center max-w-xs md:max-w-none`}
   img {
-    ${tw`rounded`}
+    ${tw`rounded w-full h-auto`} /* Adiciona largura total e mantém a proporção */
   }
 `;
+
 const TextContainer = tw.div`md:mx-3 lg:mx-6 md:w-6/12 py-4 flex flex-col justify-between`;
 const QuoteContainer = tw.div`relative p-6 md:p-8 lg:p-10 mt-4 md:mt-0`;
 const Quote = tw.blockquote`text-center md:text-left font-medium text-xl lg:text-2xl xl:text-3xl`;
@@ -69,42 +77,23 @@ const DecoratorBlob2 = tw(
   SvgDecoratorBlob2
 )`absolute w-32 bottom-0 right-0 -z-10 text-pink-500 opacity-15 transform translate-x-2/3 translate-y-8`;
 
-export default () => {
+
+
+export default ({
+  title = "",
+  testimonials = [],
+  name = "rooms"
+}) => {
   /*
    * You can modify the testimonials shown by modifying the array below
    * You can add or remove objects from the array as you need.
    */
-  const testimonials = [
-    {
-      imageSrc:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3.25&w=512&h=512&q=80",
-      quote:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
-      customerName: "Charlotte Hale",
-      customerTitle: "CEO, Delos Inc."
-    },
-    {
-      imageSrc:
-        "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=512&h=512&q=80",
-      quote:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
-      customerName: "Adam Cuppy",
-      customerTitle: "Founder, EventsNYC"
-    },
-    {
-      imageSrc:
-        "https://images.unsplash.com/photo-1580852300654-03c803a14e24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4.25&w=512&h=512&q=80",
-      quote:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
-      customerName: "Steven Marcetti",
-      customerTitle: "Event Manager, Brite"
-    }
-  ];
+
   return (
-    <Container>
+    <Container name={name}>
       <Content>
         <HeadingInfoContainer>
-          <HeadingTitle>Our Awesome Customers</HeadingTitle>
+          <HeadingTitle>{title}</HeadingTitle>
           <HeadingDescription></HeadingDescription>
         </HeadingInfoContainer>
         <TestimonialSliderContainer>
@@ -112,23 +101,43 @@ export default () => {
             {testimonials.map((testimonial, index) => (
               <Testimonial key={index}>
                 <ImageContainer>
-                  <img src={testimonial.imageSrc} alt={testimonial.customerName} />
+                  <img src={testimonial.imageSrc} alt={testimonial.customerName} className="w-full h-auto rounded" />
                 </ImageContainer>
-                <TextContainer>
-                  <QuoteContainer>
-                    <QuotesLeft />
-                    <Quote>{testimonial.quote}</Quote>
-                    <QuotesRight />
-                  </QuoteContainer>
-                  <CustomerInfo>
-                    <CustomerName>{testimonial.customerName}</CustomerName>
-                    <CustomerTitle>{testimonial.customerTitle}</CustomerTitle>
-                  </CustomerInfo>
-                </TextContainer>
               </Testimonial>
             ))}
           </TestimonialSlider>
         </TestimonialSliderContainer>
+
+
+        <Features
+          cards={[
+            {
+              imageSrc: frontDeskImageSrc,
+              title: "Recepção",
+              description: "Recepção disponível para todas as salas."
+            },
+            {
+              imageSrc: couchImageSrc,
+              title: "Conforto garantido",
+              description: "Salas equipadas com sofás aconchegantes."
+            },
+            {
+              imageSrc: AcousticImageSrc,
+              title: "Acústica",
+              description: "Salas com isolamento acústico eficiente."
+            },
+            {
+              imageSrc: AirConImageSrc,
+              title: "Climatização",
+              description: "Todas as salas com ar-condicionado."
+            }
+
+          ]}
+
+          imageContainerCss={tw`p-2!`}
+          imageCss={tw`w-20! h-20!`}
+
+        />
       </Content>
       <DecoratorBlob1 />
       <DecoratorBlob2 />

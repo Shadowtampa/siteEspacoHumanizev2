@@ -5,6 +5,7 @@ import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import Hero from "components/hero/TwoColumnWithVideo.js";
 import Features from "components/features/ThreeColSimple.js";
 import MainFeature from "components/features/TwoColWithButton.js";
+import FotosSalas from "components/testimonials/TwoColumnWithImage.js";
 // import MainFeature2 from "components/features/TwoColSingleFeatureWithStats2.js";
 import TabGrid from "components/cards/TabCardGrid.js";
 // import Testimonial from "components/testimonials/ThreeColumnWithProfileImage.js";
@@ -15,6 +16,14 @@ import AcousticImageSrc from "images/acoustic.svg";
 import AirConImageSrc from "images/airCon.svg";
 import frontDeskImageSrc from "images/front-desk.png";
 import couchImageSrc from "images/sofa.png";
+
+import fotoSala1 from "images/fotosSala1.jpeg"
+import fotoSala2 from "images/fotosSala2.jpeg"
+import fotoSala3 from "images/fotosSala3.jpeg"
+import fotoSala4 from "images/fotosSala4.jpeg"
+import fotoSala5 from "images/fotosSala5.jpeg"
+import fotoSala6 from "images/fotosSala6.jpeg"
+
 
 import Header from "../components/headers/light.js";
 
@@ -71,40 +80,35 @@ export default () => {
         }
         name="services"
       />
-      <Features
-        heading={
-          <>
-            Espaço <HighlightedText>perfeito</HighlightedText>  pra você
-          </>
-        }
-        cards={[
-          {
-            imageSrc: frontDeskImageSrc,
-            title: "Recepção",
-            description: "Recepção disponível para todas as salas."
-          },
-          {
-            imageSrc: couchImageSrc,
-            title: "Conforto garantido",
-            description: "Salas equipadas com sofás aconchegantes."
-          },
-          {
-            imageSrc: AcousticImageSrc,
-            title: "Acústica",
-            description: "Salas com isolamento acústico eficiente."
-          },
-          {
-            imageSrc: AirConImageSrc,
-            title: "Climatização",
-            description: "Todas as salas com ar-condicionado."
-          }
 
-        ]}
 
-        imageContainerCss={tw`p-2!`}
-        imageCss={tw`w-20! h-20!`}
-        name="rooms"
-      />
+      <FotosSalas
+        title={<>
+          Espaço <HighlightedText>perfeito</HighlightedText>  pra você
+        </>}
+        testimonials={
+          [
+            {
+              imageSrc: fotoSala1
+            },
+            {
+              imageSrc: fotoSala2
+            },
+            {
+              imageSrc: fotoSala3
+            },
+            {
+              imageSrc: fotoSala4
+            },
+            {
+              imageSrc: fotoSala5
+            },
+            {
+              imageSrc: fotoSala6
+            },
+          ]}
+        name="rooms" />
+
 
       <Hero
         heading="Estamos aqui para ouvir você!"
@@ -114,7 +118,7 @@ export default () => {
         imageDecoratorBlob={true}
         name="contact"
         primaryButtonText="Whatsapp"
-        primaryButtonUrl= {`https://api.whatsapp.com/send?phone=5591${process.env.REACT_APP_NUMERO_TELEFONE}&text=Gostaria%20de%20agendar%20um%20serviço`}
+        primaryButtonUrl={`https://api.whatsapp.com/send?phone=5591${process.env.REACT_APP_NUMERO_TELEFONE}&text=Gostaria%20de%20agendar%20um%20serviço`}
       />
 
       {/* <DownloadApp

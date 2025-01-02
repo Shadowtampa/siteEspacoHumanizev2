@@ -77,7 +77,7 @@ export default ({
   description = "",
   imageContainerCss = null,
   imageCss = null,
-  name = "rooms"
+  name = "roomsFeratures"
 }) => {
   /*
    * This componets accepts a prop - `cards` which is an array of object denoting the cards. Each object in the cards array can have the following keys (Change it according to your need, you can also add more objects to have more cards in this feature component):
