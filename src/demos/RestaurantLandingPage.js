@@ -44,7 +44,7 @@ export default () => {
 
 
       <Hero
-        heading={<>Olá! Sejam <HighlightedText>Bem-vindos</HighlightedText>!</>}
+        heading={<>Olá! Sejam <HighlightedText>Bem-vindos!</HighlightedText></>}
         description="Contamos com profissionais qualificados para oferecer o melhor atendimento a você!"
         imageCss={imageCss}
         imageDecoratorBlob={true}
