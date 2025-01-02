@@ -143,7 +143,7 @@ export default () => {
               <SubscribeNewsletterContainer>
                 <ColumnHeading>Fale com a gente!</ColumnHeading>
                 <SubscribeText>
-                  <HighlightedText>Telefone</HighlightedText> +55 91 98435-5280
+                  <HighlightedText>Telefone</HighlightedText> {process.env.REACT_APP_NUMERO_TELEFONE}
                 </SubscribeText>
                 <SubscribeText>
                   <HighlightedText>Email</HighlightedText> humanize.eu@gmail.com
@@ -151,7 +151,7 @@ export default () => {
                 <SubscribeText>
                   <HighlightedText>Localização</HighlightedText> Avenida Conselheiro Furtado, n.º 2391,
                   Edifício Belém Metropolitan, sala 610, bairro Cremação, 66040-
-                  100, Belém, Pará.
+                  100, Belém, Pará. 
                 </SubscribeText>
 
               </SubscribeNewsletterContainer>
