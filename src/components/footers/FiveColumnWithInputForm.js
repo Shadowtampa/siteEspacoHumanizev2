@@ -174,7 +174,7 @@ export default () => {
         <ThreeColRow>
           <LogoContainer>
           </LogoContainer>
-          <CopywrightNotice>&copy; Todos os direitos reservados.</CopywrightNotice>
+          <CopywrightNotice>Humanize Espaço Terapêutico LTDA - CNPJ: 58.658.132/0001-95 <br />&copy; Todos os direitos reservados</CopywrightNotice>
           <SocialLinksContainer>
           </SocialLinksContainer>
         </ThreeColRow>
