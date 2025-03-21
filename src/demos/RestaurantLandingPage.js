@@ -3,7 +3,7 @@ import tw from "twin.macro";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import Hero from "components/hero/TwoColumnWithVideo.js";
-import Features from "components/features/ThreeColSimple.js";
+// import Features from "components/features/ThreeColSimple.js";
 import MainFeature from "components/features/TwoColWithButton.js";
 import FotosSalas from "components/testimonials/TwoColumnWithImage.js";
 // import MainFeature2 from "components/features/TwoColSingleFeatureWithStats2.js";
@@ -12,10 +12,10 @@ import TabGrid from "components/cards/TabCardGrid.js";
 // import DownloadApp from "components/cta/DownloadApp.js";
 import Footer from "components/footers/FiveColumnWithInputForm.js";
 
-import AcousticImageSrc from "images/acoustic.svg";
-import AirConImageSrc from "images/airCon.svg";
-import frontDeskImageSrc from "images/front-desk.png";
-import couchImageSrc from "images/sofa.png";
+// import AcousticImageSrc from "images/acoustic.svg";
+// import AirConImageSrc from "images/airCon.svg";
+// import frontDeskImageSrc from "images/front-desk.png";
+// import couchImageSrc from "images/sofa.png";
 
 import fotoSala1 from "images/fotosSala1.jpeg"
 import fotoSala2 from "images/fotosSala2.jpeg"

@@ -2,9 +2,9 @@ import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
-import { SectionHeading} from "components/misc/Headings.js";
-import TeamIllustrationSrc from "images/kaioAlexandra.png";
-import {ReactComponent as SvgDotPattern } from "images/dot-pattern.svg"
+import { SectionHeading } from "components/misc/Headings.js";
+import TeamIllustrationSrc from "images/kaioAlexandra2.jpeg";
+import { ReactComponent as SvgDotPattern } from "images/dot-pattern.svg"
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center`;
@@ -51,7 +51,7 @@ export default ({
   imageDecoratorBlob = false,
   imageDecoratorBlobCss = null,
   textOnLeft = true,
-  name="test"
+  name = "test"
 }) => {
   // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
 
@@ -59,7 +59,7 @@ export default ({
     <Container name={name}>
       <TwoColumn>
         <ImageColumn>
-          <Image css={imageCss} src={imageSrc} imageBorder={imageBorder} imageShadow={imageShadow} imageRounded={imageRounded}/>
+          <Image css={imageCss} src={imageSrc} imageBorder={imageBorder} imageShadow={imageShadow} imageRounded={imageRounded} />
           {imageDecoratorBlob && <DecoratorBlob css={imageDecoratorBlobCss} />}
         </ImageColumn>
         <TextColumn textOnLeft={textOnLeft}>
