@@ -28,18 +28,31 @@ export default class WhatsappFab extends React.Component {
     clearTimeout(this.timer);
   }
 
+  handleClick = () => {
+
+    const url =
+  `https://api.whatsapp.com/send?phone=55${process.env.REACT_APP_NUMERO_TELEFONE}` +
+  `&text=Gostaria%20de%20agendar%20um%20serviço%20`;
+
+    if (window.gtag) {
+      window.gtag('event', 'conversion', {
+        send_to: 'AW-11562559108/PSQdCJGzyugbEITNuokr',
+      });
+    }
+
+    window.open(
+      url,
+      '_blank'
+    );
+  };
+
   render() {
     if (!this.state.visible) {
       return null;
     }
 
-    const url =
-      `https://api.whatsapp.com/send?phone=55${process.env.REACT_APP_NUMERO_TELEFONE}` +
-      `&text=Gostaria%20de%20agendar%20um%20serviço%20`;
-
     return (
       <Fab
-        href={url}
         target="_blank"
         rel="noopener noreferrer"
         style={{
@@ -47,6 +60,7 @@ export default class WhatsappFab extends React.Component {
           right: '1.5rem',
           position: 'fixed',
         }}
+        onClick={this.handleClick}
       >
         <FaWhatsapp size={28} color="#fff" />
       </Fab>
