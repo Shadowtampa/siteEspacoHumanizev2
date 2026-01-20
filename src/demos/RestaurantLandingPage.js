@@ -26,6 +26,7 @@ import fotoSala6 from "images/fotosSala6.jpeg"
 
 
 import Header from "../components/headers/light.js";
+import WhatsappFab from "components/FAB/FAB.js";
 
 const HighlightedText = tw.span`bg-primary-500 text-gray-100 px-4 transform -skew-x-12 inline-block`;
 const UnderlinedText = tw.span` text-blue-500 font-bold`;
@@ -40,8 +41,10 @@ export default () => {
   return (
     <AnimationRevealPage>
 
-      <Header />
+      <WhatsappFab
+      />
 
+      <Header />
 
       <Hero
         heading={<>Olá! Sejam <HighlightedText>Bem-vindos!</HighlightedText></>}
@@ -51,7 +54,6 @@ export default () => {
         name="landing"
         primaryButtonText=""
       />
-
 
       <MainFeature
         heading={
