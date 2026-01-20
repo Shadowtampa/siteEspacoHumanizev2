@@ -21,6 +21,8 @@ import PlantaoPsicologico from "images/PlantaoPiscologico.png"
 import SupervisaoClinica from "images/Supervisão Clínica.png"
 import AlugueSalas from "images/AlugueSalas.png"
 
+import AvaliacaoCirurgia from "images/AvaliacaoCirurgia.png"
+
 import ReactModalAdapter from "../../helpers/ReactModalAdapter.js";
 
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
@@ -91,15 +93,15 @@ export default ({
         title: "Psicoterapia de Casal",
         description: "Voltada para casais, a psicoterapia de casal trabalha questões relacionais como conflitos, comunicação e intimidade, fortalecendo o vínculo afetivo e promovendo uma convivência harmoniosa."
       },
-      {
-        imageSrc: PsicoterapiaGrupo,
-        title: "Psicoterapia em Grupo",
-        description: "A psicoterapia em grupo oferece um espaço para interação entre pessoas com experiências similares, promovendo apoio mútuo e aprendizado coletivo."
-      },
+      // {
+      //   imageSrc: PsicoterapiaGrupo,
+      //   title: "Psicoterapia em Grupo",
+      //   description: "A psicoterapia em grupo oferece um espaço para interação entre pessoas com experiências similares, promovendo apoio mútuo e aprendizado coletivo."
+      // },
       {
         imageSrc: PsicoterapiDomicilar,
-        title: "Psicoterapia Domiciliar",
-        description: "Atendimento psicoterápico no conforto da residência do cliente, garantindo continuidade no cuidado e suporte emocional necessário para quem não pode se deslocar até o consultório."
+        title: "Avaliação Neuropsicológica Home Care",
+        description: "Avaliação neuropsicológica realizada no domicílio, com aplicação de entrevistas e testes padronizados para análise do funcionamento cognitivo e comportamental, incluindo laudo e orientações clínicas."
       },
       // {
       //   imageSrc: PsicoterapiaInfantil,
@@ -116,25 +118,25 @@ export default ({
       //   title: "Orientação Vocacional",
       //   description: "Ajuda jovens e adultos a explorarem habilidades, interesses e valores, auxiliando na escolha de uma profissão que esteja alinhada com suas aspirações e potencialidades."
       // },
-      {
-        imageSrc: TreinamentosPalestras,
-        title: "Treinamentos e Palestras",
-        description: "Oferecemos treinamentos e palestras sobre temas relacionados ao bem-estar mental, desenvolvimento pessoal e profissional, com o objetivo de promover saúde mental e conscientização."
-      },
+      // {
+      //   imageSrc: TreinamentosPalestras,
+      //   title: "Treinamentos e Palestras",
+      //   description: "Oferecemos treinamentos e palestras sobre temas relacionados ao bem-estar mental, desenvolvimento pessoal e profissional, com o objetivo de promover saúde mental e conscientização."
+      // },
       {
         imageSrc: PlantaoPsicologico,
-        title: "Plantão Psicológico",
-        description: "Atendimento imediato e breve para suporte emocional urgente, ideal para situações de crise ou quando a pessoa necessita ser ouvida e acolhida no momento."
-      },
-      {
-        imageSrc: SupervisaoClinica,
-        title: "Supervisão Clínica",
-        description: "Serviço de orientação para profissionais e estagiários da psicologia, focando no desenvolvimento de competências clínicas e apoio técnico em casos práticos."
+        title: "Avaliação Neuropsicológica",
+        description: "Procedimento clínico que avalia funções cognitivas, emocionais e comportamentais por meio de entrevistas e testes padronizados, auxiliando na investigação de condições clínicas."
       },
       {
         imageSrc: AlugueSalas,
         title: "Aluguel de salas",
         description: "Disponibilizamos salas confortáveis e equipadas para aluguel, ideais para profissionais e estagiários da psicologia. Um ambiente perfeito para atendimentos, reuniões ou práticas supervisionadas, com infraestrutura que atende às suas necessidades."
+      },
+      {
+        imageSrc: AvaliacaoCirurgia,
+        title: "Avaliação Psicológica para Cirurgias",
+        description: "Avaliação psicológica pré e pós operatória que identifica condições emocionais e comportamentais, auxiliando na indicação cirúrgica, na redução de riscos e no preparo do paciente para o procedimento."
       }
     ].map(item => ({
       ...item,
