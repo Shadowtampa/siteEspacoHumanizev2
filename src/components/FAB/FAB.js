@@ -14,9 +14,28 @@ const Fab = tw.a`
 `;
 
 export default class WhatsappFab extends React.Component {
-  render() {
+  state = {
+    visible: false,
+  };
 
-    const url = `https://api.whatsapp.com/send?phone=55${process.env.REACT_APP_NUMERO_TELEFONE}&text=Gostaria%20de%20agendar%20um%20serviço%20`;
+  componentDidMount() {
+    this.timer = setTimeout(() => {
+      this.setState({ visible: true });
+    }, 1450);
+  }
+
+  componentWillUnmount() {
+    clearTimeout(this.timer);
+  }
+
+  render() {
+    if (!this.state.visible) {
+      return null;
+    }
+
+    const url =
+      `https://api.whatsapp.com/send?phone=55${process.env.REACT_APP_NUMERO_TELEFONE}` +
+      `&text=Gostaria%20de%20agendar%20um%20serviço%20`;
 
     return (
       <Fab
